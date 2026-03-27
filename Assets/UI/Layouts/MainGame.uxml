@@ -1,0 +1,74 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Root" style="flex-grow: 1;">
+        <ui:VisualElement name="Container_Progress" class="progress-container">
+            <ui:VisualElement name="Fill_Progress" class="progress-fill" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Container_Menu" style="flex-grow: 1; display: flex;">
+            <ui:VisualElement name="Zone_Top" class="container-menu-zone" style="justify-content: space-around;">
+                <ui:VisualElement name="Header_Box">
+                    <ui:Label text="How X Are You?" name="Lbl_Title" />
+                    <ui:VisualElement name="Img_Flag" style="position: absolute; top: -15px; right: -15px; width: 80px; height: 60px; -unity-background-scale-mode: scale-to-fit; rotate: 15deg;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Zone_Bottom" class="container-menu-zone" style="justify-content: flex-start;">
+                <ui:Button text="Start Game" name="Btn_Start" style="background-image: url(&quot;project://database/Assets/UI/Textures/Backgrounds/bg_pattern.png?fileID=2800000&amp;guid=757476d2bd7ed7247b2f0bb5f3e6ac60&amp;type=3#bg_pattern&quot;); -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; border-top-left-radius: 48px; border-top-right-radius: 48px; border-bottom-right-radius: 48px; border-bottom-left-radius: 48px;" />
+                <ui:Button text="EN / X" name="Btn_LangToggle" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Container_Quiz" style="flex-grow: 1; display: none;">
+            <ui:VisualElement name="Box_Question">
+                <ui:Label text="Question goes here..." name="Lbl_QuestionText" />
+                <ui:VisualElement name="Img_QuestionVisual" style="display: flex;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="Grid_Answers">
+                <ui:Button name="Btn_Ans0">
+                    <ui:Label text="Button 0" name="Lbl_Ans" style="display: flex;" />
+                    <ui:VisualElement name="Img_Ans" scale-mode="ScaleToFit" style="flex-grow: 1; display: none;" />
+                </ui:Button>
+                <ui:Button name="Btn_Ans1">
+                    <ui:Label text="Button 1" name="Lbl_Ans" style="display: flex;" />
+                    <ui:VisualElement name="Img_Ans" scale-mode="ScaleToFit" style="flex-grow: 1; display: none;" />
+                </ui:Button>
+                <ui:Button name="Btn_Ans2">
+                    <ui:Label text="Button 2" name="Lbl_Ans" style="display: flex;" />
+                    <ui:VisualElement name="Img_Ans" scale-mode="ScaleToFit" style="flex-grow: 1; display: none;" />
+                </ui:Button>
+                <ui:Button name="Btn_Ans3">
+                    <ui:Label text="Button 3" name="Lbl_Ans" style="display: flex;" />
+                    <ui:VisualElement name="Img_Ans" scale-mode="ScaleToFit" style="flex-grow: 1; display: none;" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Container_Result" style="flex-grow: 1; display: none;">
+            <ui:VisualElement name="Box_Result">
+                <ui:Label text="XXX%" name="Lbl_Score" />
+                <ui:Label text="Result Title" name="Lbl_ResultTitle" />
+                <ui:Label text="Result description" name="Lbl_ResultDesc" />
+            </ui:VisualElement>
+            <ui:Button text="Try Again" name="Btn_Restart" />
+        </ui:VisualElement>
+        <ui:Button name="Btn_Settings" class="btn-settings" />
+        <ui:VisualElement name="Panel_Settings" class="panel-settings panel-settings-hidden">
+            <ui:VisualElement name="Settings_Overlay" class="settings-overlay" />
+            <ui:VisualElement name="Box_Settings" class="box-settings">
+                <ui:VisualElement name="Settings_Row" class="settings-row">
+                    <ui:Button name="Btn_ToggleMusic" class="btn-toggle" style="background-image: url(&quot;project://database/Assets/UI/Textures/Icons/icon_music_on.png?fileID=2800000&amp;guid=ad3552baaf6ee104e9e30d76550f2671&amp;type=3#icon_music_on&quot;);" />
+                    <ui:Button name="Btn_ToggleSFX" class="btn-toggle" style="background-image: url(&quot;project://database/Assets/UI/Textures/Icons/icon_sfx_on.png?fileID=2800000&amp;guid=dd9bdf73cd79f484e9ecd2545bf835a4&amp;type=3#icon_sfx_on&quot;);" />
+                    <ui:Button name="Btn_ReturnToMenu" class="btn-toggle" style="background-image: url(&quot;project://database/Assets/UI/Textures/Icons/menu_open_icon.png?fileID=2800000&amp;guid=b851747347ea0614e8e8b64c86c188d1&amp;type=3#menu_open_icon&quot;);" />
+                </ui:VisualElement>
+                <ui:Button name="Btn_CloseSettings" class="btn-close" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Panel_Confirm" class="panel-confirm panel-confirm-hidden">
+            <ui:VisualElement name="Confirm_Overlay" class="settings-overlay" />
+            <ui:VisualElement name="Box_Confirm" class="box-confirm">
+                <ui:Label name="Lbl_ConfirmText" text="Return to Main Menu?" class="confirm-text" />
+                <ui:VisualElement name="Confirm_Buttons" class="confirm-buttons">
+                    <ui:Button name="Btn_ConfirmYes" text="Yes" class="btn-confirm" />
+                    <ui:Button name="Btn_ConfirmNo" text="No" class="btn-confirm" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="Panel_Transition" picking-mode="Ignore" class="curtain-hidden" style="display: flex;" />
+    </ui:VisualElement>
+</ui:UXML>

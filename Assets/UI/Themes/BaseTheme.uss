@@ -1,0 +1,604 @@
+:root {
+    --theme-bg: rgb(231, 158, 133);
+    --card-bg: rgba(255, 248, 245, 0.95);
+    --theme-accent: rgb(56, 115, 115);
+    --hover-bg: rgb(240, 213, 154);
+    --text-main: rgb(56, 115, 115);
+    --text-body: rgb(166, 112, 93);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+}
+
+Label {
+    color: var(--text-main);
+    -unity-font-style: bold;
+    margin: 0;
+    padding: 0;
+}
+
+#Root {
+    background-image: url("project://database/Assets/UI/Textures/Backgrounds/bg_pattern.png?fileID=2800000&guid=757476d2bd7ed7247b2f0bb5f3e6ac60&type=3#bg_pattern");
+    -unity-background-scale-mode: stretch-to-fill;
+    background-repeat: repeat;
+    background-size: contain;
+    -unity-background-image-tint-color: rgb(231, 158, 133);
+}
+
+.progress-container {
+    height: 12px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--theme-accent);
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+    transition-property: width;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out-circ;
+}
+
+#Container_Menu {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5%;
+}
+
+.container-menu-zone {
+    width: 100%;
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+#Header_Box {
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    justify-content: center;
+    align-items: center;
+    background-image: url("project://database/Assets/UI/Textures/Frames/frame_round_gradient.png?fileID=2800000&guid=519aad8d8810daa4cae11a23ec56fa19&type=3#frame_round_gradient");
+    -unity-slice-left: 60;
+    -unity-slice-top: 60;
+    -unity-slice-right: 60;
+    -unity-slice-bottom: 60;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.78);
+}
+
+#Lbl_Title {
+    font-size: 60px;
+    color: var(--text-main);
+    -unity-text-align: middle-center;
+    white-space: normal;
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+}
+
+#Container_Menu Button {
+    width: 60%;
+    max-width: 500px;
+    height: 85px;
+    margin-bottom: 40px;
+    font-size: 48px;
+}
+
+#Container_Quiz {
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0);
+    transition-property: opacity, translate;
+    transition-duration: 0.225s;
+    transition-timing-function: ease-in-out;
+}
+
+#Box_Question {
+    height: 40%;
+    width: 92%;
+    margin-top: 15px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: var(--radius-lg);
+    background-image: url("project://database/Assets/UI/Textures/Buttons/button_square_gradient.png?fileID=2800000&guid=0df8b87f855dd1340abd0c59e276c0cd&type=3#button_square_gradient");
+    -unity-slice-left: 10;
+    -unity-slice-top: 10;
+    -unity-slice-right: 10;
+    -unity-slice-bottom: 10;
+}
+
+#Lbl_QuestionText {
+    font-size: 52px;
+    width: 100%;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: var(--text-body);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+#Img_QuestionVisual {
+    height: 70%;
+    width: 90%;
+    margin-top: 20px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#Grid_Answers {
+    height: 60%;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+}
+
+Button {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-color: rgba(0, 0, 0, 0);
+    font-size: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: var(--text-body);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+    transition-property: scale, background-color, translate, color, border-color;
+    transition-timing-function: ease-out;
+    background-image: url("project://database/Assets/UI/Textures/Buttons/button_square_gradient.png?fileID=2800000&guid=0df8b87f855dd1340abd0c59e276c0cd&type=3#button_square_gradient");
+    -unity-slice-left: 70;
+    -unity-slice-top: 70;
+    -unity-slice-right: 70;
+    -unity-slice-bottom: 70;
+}
+
+Button Label {
+    color: var(--text-body);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: normal;
+}
+
+Button:hover {
+    scale: 1.02;
+    color: var(--theme-accent);
+    border-color: var(--theme-accent);
+    translate: 0 -5px;
+    -unity-background-image-tint-color: rgb(232, 255, 255);
+}
+
+Button:hover Label {
+    color: var(--theme-accent);
+}
+
+Button:active {
+    scale: 0.98;
+    translate: 0 1px;
+    color: var(--theme-accent);
+    border-color: var(--theme-accent);
+    border-bottom-width: 0;
+}
+
+Button:active Label {
+    color: var(--theme-accent);
+}
+
+#Container_Result {
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    flex-direction: column;
+}
+
+#Box_Result {
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    background-image: url("project://database/Assets/UI/Textures/Buttons/button_square_gradient.png?fileID=2800000&guid=0df8b87f855dd1340abd0c59e276c0cd&type=3#button_square_gradient");
+    -unity-slice-left: 60;
+    -unity-slice-top: 60;
+    -unity-slice-right: 60;
+    -unity-slice-bottom: 60;
+}
+
+#Lbl_Score {
+    font-size: 140px;
+    color: var(--text-main);
+    margin-bottom: 0;
+    text-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+#Lbl_ResultTitle {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+#Lbl_ResultDesc {
+    font-size: 40px;
+    margin-bottom: 20px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    color: var(--text-body);
+}
+
+#Btn_Restart {
+    width: 80%;
+    max-width: 400px;
+    height: 80px;
+    font-size: 36px;
+    margin-top: 40px;
+}
+
+#Panel_Transition {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--theme-accent);
+    display: flex;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.layout-list {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.layout-list Button {
+    width: 100%;
+    height: 22%;
+    flex-direction: row;
+}
+
+.layout-list #Img_Ans {
+    display: none;
+}
+
+.layout-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.layout-grid Button {
+    width: 46%;
+    height: 46%;
+    margin: 1%;
+    padding: 6px;
+}
+
+.layout-grid #Lbl_Ans {
+    display: none;
+}
+
+.layout-grid #Img_Ans {
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.curtain-hidden {
+    opacity: 0;
+}
+
+.quiz-center {
+    opacity: 1;
+    translate: 0 0;
+}
+
+.quiz-right {
+    opacity: 0;
+    translate: 100% 0;
+}
+
+.quiz-left {
+    opacity: 0;
+    translate: -100% 0;
+}
+
+/* ============================================
+   ANSWER FEEDBACK
+   ============================================ */
+
+.answer-correct {
+    -unity-background-image-tint-color: rgb(76, 175, 80);
+    scale: 1.05;
+    translate: 0 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out-back;
+}
+
+.answer-correct:hover {
+    -unity-background-image-tint-color: rgb(76, 175, 80);
+    scale: 1.05;
+    translate: 0 0;
+}
+
+.answer-correct Label,
+.answer-correct:hover Label {
+    color: rgb(255, 255, 255);
+}
+
+.answer-wrong {
+    -unity-background-image-tint-color: rgb(231, 76, 60);
+    scale: 1.05;
+    translate: 0 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out-back;
+}
+
+.answer-wrong:hover {
+    -unity-background-image-tint-color: rgb(231, 76, 60);
+    scale: 1.05;
+    translate: 0 0;
+}
+
+.answer-wrong Label,
+.answer-wrong:hover Label {
+    color: rgb(255, 255, 255);
+}
+
+.answer-disabled {
+    opacity: 0.9;
+}
+
+.layout-grid .answer-disabled {
+    opacity: 0.6;
+}
+
+/* ============================================
+   SETTINGS GEAR BUTTON
+   ============================================ */
+
+#Btn_Settings {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    padding: 12px;
+    border-radius: 50%;
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: var(--theme-accent);
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url("project://database/Assets/UI/Textures/Icons/icon_settings.png?fileID=2800000&guid=a81cd43651f6b13478dca5b65fe61a77&type=3#icon_settings");
+}
+
+#Btn_Settings:hover {
+    scale: 1.1;
+    -unity-background-image-tint-color: var(--text-body);
+}
+
+#Btn_Settings:active {
+    scale: 0.95;
+}
+
+/* ============================================
+   SETTINGS PANEL OVERLAY
+   ============================================ */
+
+.panel-settings {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.panel-settings-hidden {
+    opacity: 0;
+    display: none;
+}
+
+.panel-settings-visible {
+    opacity: 1;
+    display: flex;
+}
+
+.settings-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-bg);
+}
+
+.box-settings {
+    margin-top: 90px;
+    margin-left: 20px;
+    padding: 24px;
+    background-color: rgba(255, 248, 245, 0);
+    flex-direction: column;
+    align-items: center;
+    background-image: url("project://database/Assets/UI/Textures/Buttons/button_square_gradient.png?fileID=2800000&guid=0df8b87f855dd1340abd0c59e276c0cd&type=3#button_square_gradient");
+    -unity-slice-left: 30;
+    -unity-slice-top: 30;
+    -unity-slice-right: 30;
+    -unity-slice-bottom: 30;
+    -unity-slice-scale: 2px;
+}
+
+.settings-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================================
+   TOGGLE BUTTONS (Music/SFX)
+   ============================================ */
+
+.btn-toggle {
+    width: 88px;
+    height: 88px;
+    margin: 16px;
+    padding: 50px;
+    border-radius: 30%;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.btn-toggle:hover {
+    scale: 1.1;
+    translate: 0 0;
+}
+
+.btn-toggle:active {
+    scale: 0.95;
+    translate: 0 0;
+}
+
+#Btn_ToggleMusic {
+    -unity-background-image-tint-color: var(--theme-accent);
+}
+
+#Btn_ToggleMusic.muted {
+    -unity-background-image-tint-color: var(--text-body);
+    opacity: 0.6;
+}
+
+#Btn_ToggleSFX {
+    -unity-background-image-tint-color: var(--theme-accent);
+}
+
+#Btn_ToggleSFX.muted {
+    -unity-background-image-tint-color: var(--text-body);
+    opacity: 0.6;
+}
+
+#Btn_ReturnToMenu {
+    -unity-background-image-tint-color: var(--text-body);
+}
+
+/* ============================================
+   CLOSE BUTTON
+   ============================================ */
+
+.btn-close {
+    width: 68px;
+    height: 68px;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 36%;
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: var(--text-body);
+    background-color: rgba(255, 255, 255, 1);
+    background-image: url("project://database/Assets/UI/Textures/Icons/icon_close.png?fileID=2800000&guid=66c7e6a90704a4b4da8993cb2fff3d63&type=3#icon_close");
+    position: absolute; 
+    right: -36px; 
+    top: -36px;
+}
+
+.btn-close:hover {
+    scale: 1.1;
+    translate: 0 0;
+    -unity-background-image-tint-color: rgb(180, 80, 80);
+}
+
+.btn-close:active {
+    scale: 0.95;
+    translate: 0 0;
+}
+
+/* ============================================
+   RETURN TO MENU BUTTON
+   ============================================ */
+
+.btn-return-menu-hidden {
+    display: none;
+}
+
+/* ============================================
+   CONFIRMATION DIALOG
+   ============================================ */
+
+.panel-confirm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+.panel-confirm-hidden {
+    opacity: 0;
+    display: none;
+}
+
+.panel-confirm-visible {
+    opacity: 1;
+    display: flex;
+}
+
+.box-confirm {
+    padding: 40px;
+    background-color: rgba(255, 248, 245, 0.98);
+    border-radius: var(--radius-lg);
+    align-items: center;
+    background-image: url("project://database/Assets/UI/Textures/Buttons/button_square_gradient.png?fileID=2800000&guid=0df8b87f855dd1340abd0c59e276c0cd&type=3#button_square_gradient");
+    -unity-slice-left: 40;
+    -unity-slice-top: 40;
+    -unity-slice-right: 40;
+    -unity-slice-bottom: 40;
+    -unity-slice-scale: 2px;
+}
+
+.confirm-text {
+    font-size: 52px;
+    margin-bottom: 30px;
+    color: var(--text-main);
+    -unity-text-align: middle-center;
+}
+
+.confirm-buttons {
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+}
+
+.btn-confirm {
+    margin: 10px;
+    font-size: 48px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+/* ============================================
+   QUIZ DISABLED STATE (when settings open)
+   ============================================ */
+
+.quiz-disabled {
+    opacity: 0.5;
+}
