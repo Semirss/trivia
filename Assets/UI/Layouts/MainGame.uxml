@@ -51,7 +51,7 @@
             <ui:Button text="Try Again" name="Btn_Restart" style="-unity-font-definition: url(&quot;project://database/Assets/Data/ET/Noto_Sans_Ethiopic%20(1)/static/NotoSansEthiopic-Regular.ttf?fileID=12800000&amp;guid=448cfedff8854d647b00e16f992763c3&amp;type=3#NotoSansEthiopic-Regular&quot;);" />
         </ui:VisualElement>
         <ui:Button name="Btn_Settings" class="btn-settings" style="background-color: rgb(255, 255, 255); border-top-left-radius: -30px; border-top-right-radius: 62px; border-bottom-right-radius: -54px; border-bottom-left-radius: 152px; background-image: url(&quot;project://database/Assets/UI/Textures/Icons/icon_settings.png?fileID=2800000&amp;guid=a81cd43651f6b13478dca5b65fe61a77&amp;type=3#icon_settings&quot;); -unity-background-image-tint-color: rgb(0, 0, 0); display: flex; overflow: hidden;" />
-        <ui:VisualElement name="Panel_Settings" class="panel-settings panel-settings-hidden" style="background-image: none; -unity-background-image-tint-color: rgb(200, 189, 189); display: none;">
+        <ui:VisualElement name="Panel_Settings" class="panel-settings panel-settings-hidden" style="background-image: none; -unity-background-image-tint-color: rgb(200, 189, 189);">
             <ui:VisualElement name="Settings_Overlay" class="settings-overlay" style="display: flex;" />
             <ui:VisualElement name="Box_Settings" class="box-settings" style="background-color: rgb(226, 182, 163); display: flex;">
                 <ui:VisualElement name="Settings_Row" class="settings-row">
@@ -62,7 +62,7 @@
                 <ui:Button name="Btn_CloseSettings" class="btn-close" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="Panel_Confirm" class="panel-confirm panel-confirm-hidden" style="display: none;">
+        <ui:VisualElement name="Panel_Confirm" class="panel-confirm panel-confirm-hidden">
             <ui:VisualElement name="Confirm_Overlay" class="settings-overlay" />
             <ui:VisualElement name="Box_Confirm" class="box-confirm">
                 <ui:Label name="Lbl_ConfirmText" text="Return to Main Menu?" class="confirm-text" />

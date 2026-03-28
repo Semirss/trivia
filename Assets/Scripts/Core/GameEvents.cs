@@ -21,5 +21,8 @@ namespace HowX.Core
         // Settings Events
         public static Action OnSettingsOpened;
         public static Action OnSettingsClosed;
+
+        // Economy Events
+        public static Action<int> OnCoinsChanged;  // Fired with new total whenever coins change
     }
 }

@@ -47,6 +47,7 @@ namespace HowX.Core
         private Label resultDesc;
         private Label resultScore;
         private Button restartButton;
+        private Label scoreLabel;          // #Score — persistent telecoin display
 
         #endregion
 
@@ -94,6 +95,10 @@ namespace HowX.Core
             SetupButtonCallbacks();
             RegisterAllButtonAudio();
             InitializeUIState();
+
+            // Subscribe to coin changes so the label always stays in sync
+            GameEvents.OnCoinsChanged += UpdateScoreLabel;
+            UpdateScoreLabel(TelecoinManager.TotalCoins);
         }
 
         private void OnDisable()
@@ -101,6 +106,7 @@ namespace HowX.Core
             CleanupAnswerButtons();
             CleanupButtonCallbacks();
             UnregisterAllButtonAudio();
+            GameEvents.OnCoinsChanged -= UpdateScoreLabel;
         }
 
         #endregion
@@ -131,6 +137,9 @@ namespace HowX.Core
             resultDesc = root.Q<Label>("Lbl_ResultDesc");
             resultScore = root.Q<Label>("Lbl_Score");
             restartButton = root.Q<Button>("Btn_Restart");
+
+            // Economy
+            scoreLabel = root.Q<Label>("Score");
         }
 
         private void SetupAnswerButtons()
@@ -486,7 +495,11 @@ namespace HowX.Core
             int realDataIndex = currentShuffleIndices[btnIndex];
 
             bool correct = q.correctIndices != null && q.correctIndices.Contains(realDataIndex);
-            if (correct) currentScore++;
+            if (correct)
+            {
+                currentScore++;
+                TelecoinManager.AddCoins(TelecoinManager.COINS_PER_CORRECT_ANSWER); // +10 telecoins
+            }
 
             // Start feedback sequence
             StartCoroutine(AnswerFeedbackSequence(btnIndex, correct, q));
@@ -582,7 +595,16 @@ namespace HowX.Core
                 {
                     string subtitle = earnedTier.subtitle?.Get(isNativeLanguage) ?? "";
                     string desc = earnedTier.description?.Get(isNativeLanguage) ?? "";
-                    resultDesc.text = $"<b>{subtitle}</b>\n\n{desc}";
+                    
+                    int maxQs = activeQuestions != null ? activeQuestions.Count : 1;
+                    int earnedCoins = currentScore * TelecoinManager.COINS_PER_CORRECT_ANSWER;
+                    int totalPossibleCoins = maxQs * TelecoinManager.COINS_PER_CORRECT_ANSWER;
+
+                    string coinMsg = isNativeLanguage 
+                        ? $"ከ {totalPossibleCoins} ኮይን {earnedCoins} አግኝተዋል" 
+                        : $"You have earned {earnedCoins}/{totalPossibleCoins} coins";
+
+                    resultDesc.text = $"<b>{subtitle}</b>\n\n{desc}\n\n<color=#FFD700><b>{coinMsg}</b></color>";
                 }
             }
 
@@ -743,6 +765,11 @@ namespace HowX.Core
             float progress = (float)currentQuestionIndex / activeQuestions.Count * 100f;
             if (progress > 100f) progress = 100f;
             progressBarFill.style.width = Length.Percent(progress);
+        }
+        private void UpdateScoreLabel(int newTotal)
+        {
+            if (scoreLabel != null)
+                scoreLabel.text = $"{newTotal} Telecoins";
         }
 
         #endregion
