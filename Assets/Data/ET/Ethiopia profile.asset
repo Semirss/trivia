@@ -1,0 +1,880 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1876d1f63a248ff4e94560d628feca92, type: 3}
+  m_Name: Ethiopia profile
+  m_EditorClassIdentifier: Assembly-CSharp::HowX.Data.QuizProfile
+  folderName: 
+  backgroundImage: {fileID: 0}
+  quizCsvFile: {fileID: 0}
+  tierCsvFile: {fileID: 0}
+  uiCsvFile: {fileID: 0}
+  quizSheetUrl: https://docs.google.com/spreadsheets/d/1VxaGn2yn1IsPtd4C3WTFG0ykQWFw3yNzQ49eZIaOXao/edit?usp=sharing
+  tierSheetUrl: https://docs.google.com/spreadsheets/d/1uHMbNsMZjr7MACtoKHHjK-rypuQ6uA_73xwX5jF5SI4/edit?usp=sharing
+  uiSheetUrl: https://docs.google.com/spreadsheets/d/1uaYj6X-N2Bwkczij0TJIeYPY2IcH4pWVpE1663HkpMM/edit?usp=sharing
+  uiData:
+    titleTemplate:
+      en: Ethio Trivia
+      native: "\u12A2\u1275\u12EE \u1325\u12EB\u1244\u1293 \u1218\u120D\u1235"
+    btnStart:
+      en: Start Game
+      native: "\u1328\u12CB\u1273 \u1300\u121D\u122D"
+    btnRestart:
+      en: Try Again
+      native: "\u12A5\u1295\u12F0\u1308\u1293 \u121E\u12AD\u122D"
+    btnLang:
+      en: English
+      native: "\u12A0\u121B\u122D\u129B"
+    confirmTitle:
+      en: 
+      native: 
+    btnYes:
+      en: 
+      native: 
+    btnNo:
+      en: 
+      native: 
+    flagIcon: {fileID: 0}
+  questions:
+  - id: 00
+    questionText:
+      en: What is the capital city of Ethiopia?
+      native: "\u12E8\u12A2\u1275\u12EE\u1335\u12EB \u12CB\u1293 \u12A8\u1270\u121B
+        \u121B\u1295 \u1293\u1275?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Addis Ababa
+      native: "\u12A0\u12F2\u1235 \u12A0\u1260\u1263"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Adama
+      native: "\u12A0\u12F3\u121B"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Bahir Dar
+      native: "\u1263\u1205\u122D \u12F3\u122D"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Mekelle
+      native: "\u1218\u1240\u120C"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 01
+    questionText:
+      en: Which of these is the Ethiopian flag?
+      native: "\u12A8\u12A5\u1290\u12DA\u1205 \u12E8\u12A2\u1275\u12EE\u1335\u12EB
+        \u1263\u1295\u12F2\u122B \u12E8\u1275\u129B\u12CD \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Egypt Flag
+      native: "\u12E8\u130D\u1265\u1345 \u1263\u1295\u12F2\u122B"
+    answer0_Image: {fileID: 2800000, guid: e871d18a4757ee0419953acaec31e3f8, type: 3}
+    answer1:
+      en: Eritrea Flag
+      native: "\u12E8\u12A4\u122D\u1275\u122B \u1263\u1295\u12F2\u122B"
+    answer1_Image: {fileID: 2800000, guid: d4da54c6a8225a7408213f9897b33479, type: 3}
+    answer2:
+      en: Ethiopia Flag
+      native: "\u12E8\u12A2\u1275\u12EE\u1335\u12EB \u1263\u1295\u12F2\u122B"
+    answer2_Image: {fileID: 2800000, guid: 426c35128f640de4d9e25e972648146e, type: 3}
+    answer3:
+      en: Kenya Flag
+      native: "\u12E8\u12AC\u1295\u12EB \u1263\u1295\u12F2\u122B"
+    answer3_Image: {fileID: 2800000, guid: 277cc5d7e4cba4543b54feaed753e17e, type: 3}
+    useQuestionAnswer: 0
+    correctIndices: 02000000
+    useImageAnswers: 1
+  - id: 02
+    questionText:
+      en: What is the main staple food of Ethiopia?
+      native: "\u12CB\u1293 \u12E8\u121D\u130D\u1265 \u12A0\u12ED\u1290\u1275 \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Rice
+      native: "\u1229\u12DD"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Injera
+      native: "\u12A5\u1295\u1300\u122B"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Pasta
+      native: "\u1353\u1235\u1273"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Bread
+      native: "\u12F3\u1266"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 01000000
+    useImageAnswers: 0
+  - id: 03
+    questionText:
+      en: "Which animal is known as Ethiopia\u2019s national symbol?"
+      native: "\u12E8\u12A2\u1275\u12EE\u1335\u12EB \u121D\u120D\u12AD\u1275 \u12E8\u1206\u1290
+        \u12A5\u1295\u1235\u1233 \u12E8\u1275\u129B\u12CD \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Lion
+      native: "\u12A0\u1295\u1260\u1233"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Elephant
+      native: "\u12DD\u1206\u1295"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Giraffe
+      native: "\u12D8\u122B\u134D"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Black Lion
+      native: "\u1325\u1241\u122D \u12A0\u1295\u1260\u1233"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 03000000
+    useImageAnswers: 0
+  - id: 04
+    questionText:
+      en: 'Which one is lalibela '
+      native: "\u12ED\u1205\u1295 \u121D\u120D\u12AD\u1275 \u1208\u12ED"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Lalibela Churches
+      native: "\u12E8\u120B\u120A\u1260\u120B \u1264\u1270\u12AD\u122D\u1235\u1272\u12EB\u1293\u1275"
+    answer0_Image: {fileID: 2800000, guid: 3b526cc9a43070c49b66d12f02958a66, type: 3}
+    answer1:
+      en: Axum Obelisk
+      native: "\u12A0\u12AD\u1231\u121D \u1210\u12CD\u120D\u1275"
+    answer1_Image: {fileID: 2800000, guid: f8a150d925bb1d343a842ec8c7740d1e, type: 3}
+    answer2:
+      en: Fasil Castle
+      native: "\u134B\u1232\u120D \u130D\u1295\u1265"
+    answer2_Image: {fileID: 2800000, guid: 6df7c967e44aa9c4a8610688ca20b29f, type: 3}
+    answer3:
+      en: Unity Park
+      native: "\u12E9\u1292\u1272 \u1353\u122D\u12AD"
+    answer3_Image: {fileID: 2800000, guid: 37f98e284f04f2742a0acee9bf903c18, type: 3}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 1
+  - id: 05
+    questionText:
+      en: Which river is the longest in Ethiopia?
+      native: "\u1260\u12A2\u1275\u12EE\u1335\u12EB \u12CD\u1235\u1325 \u1228\u1305\u1219
+        \u12C8\u1295\u12DD \u12E8\u1275\u129B\u12CD \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Awash
+      native: "\u12A0\u12CB\u123D"
+    answer0_Image: {fileID: 2800000, guid: 0987d415191c3e94b826faeaf0ef4590, type: 3}
+    answer1:
+      en: Abay (Blue Nile)
+      native: "\u12A0\u1263\u12ED"
+    answer1_Image: {fileID: 2800000, guid: 47c8e0f29884bc54f8fd0fc4773b7dd7, type: 3}
+    answer2:
+      en: Tekeze
+      native: "\u1270\u12A8\u12DC"
+    answer2_Image: {fileID: 2800000, guid: fe6c5596d1fd0c24583baf09eb72e53c, type: 3}
+    answer3:
+      en: Omo
+      native: "\u12A6\u121E"
+    answer3_Image: {fileID: 2800000, guid: fc8df831f7848544fba28c5a75d02519, type: 3}
+    useQuestionAnswer: 0
+    correctIndices: 01000000
+    useImageAnswers: 1
+  - id: 06
+    questionText:
+      en: Which Ethiopian coffee ceremony item is this?
+      native: "\u12ED\u1205 \u12E8\u1261\u1293 \u1225\u1290-\u1225\u122D\u12D3\u1275
+        \u12A5\u1243 \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Jebena
+      native: "\u1300\u1260\u1293"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Cup
+      native: "\u1235\u1292"
+    answer1_Image: {fileID: 2800000, guid: 7c7ed3bf1901897419135f57b797f223, type: 3}
+    answer2:
+      en: Incense
+      native: "\u12D5\u1323\u1295"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Tray
+      native: "\u1233\u1205\u1295"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 02000000
+    useImageAnswers: 0
+  - id: 07
+    questionText:
+      en: What is the official language of Ethiopia?
+      native: "\u12E8\u12A2\u1275\u12EE\u1335\u12EB \u1218\u12F0\u1260\u129B \u124B\u1295\u124B
+        \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Amharic
+      native: "\u12A0\u121B\u122D\u129B"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Oromo
+      native: "\u12A6\u122E\u121D\u129B"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Tigrinya
+      native: "\u1275\u130D\u122D\u129B"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: English
+      native: "\u12A5\u1295\u130D\u120A\u12DD\u129B"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 08
+    questionText:
+      en: Which city is known for rock-hewn churches?
+      native: "\u1260\u12F5\u1295\u130B\u12ED \u12E8\u1270\u1246\u1228\u1321 \u1264\u1270\u12AD\u122D\u1235\u1272\u12EB\u1293\u1275
+        \u12E8\u121A\u1273\u12C8\u1240\u12CD \u12A8\u1270\u121B \u12E8\u1275\u129B\u12CD
+        \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Gondar
+      native: "\u130E\u1295\u12F0\u122D"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Axum
+      native: "\u12A0\u12AD\u1231\u121D"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Harar
+      native: "\u1210\u1228\u122D"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Lalibela
+      native: "\u120B\u120A\u1260\u120B"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 03000000
+    useImageAnswers: 0
+  - id: 09
+    questionText:
+      en: Identify this traditional clothing.
+      native: "\u12ED\u1205\u1295 \u1263\u1205\u120B\u12CA \u120D\u1265\u1235 \u1208\u12ED"
+    questionVisual: {fileID: 2800000, guid: 5060c849fbe0c2b418753f891898cd2f, type: 3}
+    answer0:
+      en: Netela
+      native: "\u1290\u1320\u120B"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Habesha Kemis
+      native: "\u1210\u1260\u123B \u12A8\u121A\u1235"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Gabi
+      native: "\u130B\u1262"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Kuta
+      native: "\u12A9\u1273"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 01000000
+    useImageAnswers: 0
+  - id: 10
+    questionText:
+      en: Which animal is endemic to Ethiopia?
+      native: "\u1260\u12A2\u1275\u12EE\u1335\u12EB \u1265\u127B \u12E8\u121A\u1308\u129D
+        \u12A5\u1295\u1235\u1233 \u12E8\u1275\u129B\u12CD \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Lion
+      native: "\u12A0\u1295\u1260\u1233"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Zebra
+      native: "\u12DD\u1265\u122B"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Ethiopian Wolf
+      native: "\u12E8\u12A2\u1275\u12EE\u1335\u12EB \u1240\u1260\u122E"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Leopard
+      native: "\u1290\u1265\u122D"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 02000000
+    useImageAnswers: 0
+  - id: 11
+    questionText:
+      en: What is the Ethiopian calendar based on?
+      native: "\u12E8\u12A2\u1275\u12EE\u1335\u12EB \u12D8\u1218\u1295 \u121D\u1295
+        \u120B\u12ED \u12ED\u1218\u1230\u1228\u1273\u120D?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Coptic Calendar
+      native: "\u12AE\u1355\u1272\u12AD \u12D8\u1218\u1295"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Gregorian
+      native: "\u130D\u122A\u130E\u122A\u12EB\u1295"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Julian
+      native: "\u1301\u120A\u12EB\u1295"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Lunar
+      native: "\u1328\u1228\u1243"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 12
+    questionText:
+      en: Which instrument is this?
+      native: "\u12ED\u1205 \u12E8\u1219\u12DA\u1243 \u1218\u1233\u122A\u12EB \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 2800000, guid: 905898056af5fd044a2e6e32afb69c41, type: 3}
+    answer0:
+      en: Masenqo
+      native: "\u121B\u1230\u1295\u1246"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Kebero
+      native: "\u12A8\u1260\u122E"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Washint
+      native: "\u12CB\u123D\u1295\u1275"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: All of them
+      native: "\u1201\u1209\u121D"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 13
+    questionText:
+      en: What is the main export of Ethiopia?
+      native: "\u12CB\u1293 \u12E8\u121A\u120B\u12AD \u12A5\u1243 \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Gold
+      native: "\u12C8\u122D\u1245"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Coffee
+      native: "\u1261\u1293"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Oil
+      native: "\u1290\u12F3\u1305"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Cotton
+      native: "\u1325\u1325"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 01000000
+    useImageAnswers: 0
+  - id: 14
+    questionText:
+      en: Who was Menelik II?
+      native: "\u1218\u1295\u120A\u12AD \u1201\u1208\u1270\u129B \u121B\u1295 \u1290\u1260\u122D?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Emperor
+      native: "\u1295\u1309\u1225"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: General
+      native: "\u1304\u1290\u122B\u120D"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Artist
+      native: "\u12A0\u122D\u1272\u1235\u1275"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Merchant
+      native: "\u1290\u130B\u12F4"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 15
+    questionText:
+      en: Which event is shown here?
+      native: "\u12ED\u1205 \u12E8\u1275\u129B\u12CD \u1260\u12D3\u120D \u1290\u12CD?"
+    questionVisual: {fileID: 2800000, guid: c528a2ee6b5035342ae34951bd5c8a32, type: 3}
+    answer0:
+      en: Timket
+      native: "\u1325\u121D\u1240\u1275"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Meskel
+      native: "\u1218\u1235\u1240\u120D"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Irreecha
+      native: "\u12A5\u122C\u127B"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Gena
+      native: "\u1308\u1293"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 02000000
+    useImageAnswers: 0
+  - id: 16
+    questionText:
+      en: What is Injera made from?
+      native: "\u12A5\u1295\u1300\u122B \u12A8\u121D\u1295 \u12ED\u1230\u122B\u120D?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Wheat
+      native: "\u1235\u1295\u12F4"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Teff
+      native: "\u1324\u134D"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Corn
+      native: "\u1260\u1246\u120E"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Rice
+      native: "\u1229\u12DD"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 01000000
+    useImageAnswers: 0
+  - id: 17
+    questionText:
+      en: Which region is this map showing?
+      native: "\u12ED\u1205 \u12AB\u122D\u1273 \u12E8\u1275\u129B\u12CD \u12AD\u120D\u120D
+        \u1290\u12CD?"
+    questionVisual: {fileID: 2800000, guid: 7d9e18b62ad441347b31a23c6f51262f, type: 3}
+    answer0:
+      en: Oromia
+      native: "\u12A6\u122E\u121A\u12EB"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Amhara
+      native: "\u12A0\u121B\u122B"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Tigray
+      native: "\u1275\u130D\u122B\u12ED"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Somali
+      native: "\u1236\u121B\u120A"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 03000000
+    useImageAnswers: 0
+  - id: 18
+    questionText:
+      en: What is the currency of Ethiopia?
+      native: "\u12E8\u12A2\u1275\u12EE\u1335\u12EB \u1308\u1295\u12D8\u1265 \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Birr
+      native: "\u1265\u122D"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Dollar
+      native: "\u12F6\u120B\u122D"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Euro
+      native: "\u12E9\u122E"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Pound
+      native: "\u1353\u12CD\u1295\u12F5"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 19
+    questionText:
+      en: Which sport is Ethiopia famous for?
+      native: "\u12A2\u1275\u12EE\u1335\u12EB \u1260\u121D\u1295 \u1235\u1356\u122D\u1275
+        \u1273\u12CB\u1242 \u1293\u1275?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Football
+      native: "\u12A5\u130D\u122D \u12B3\u1235"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Basketball
+      native: "\u1263\u1235\u12AC\u1275\u1266\u120D"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Long Distance Running
+      native: "\u1228\u1305\u121D \u1229\u132B"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Tennis
+      native: "\u1274\u1292\u1235"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 02000000
+    useImageAnswers: 0
+  - id: 20
+    questionText:
+      en: Identify this food.
+      native: "\u12ED\u1205\u1295 \u121D\u130D\u1265 \u1208\u12ED"
+    questionVisual: {fileID: 2800000, guid: 879a246f8ac434c4eb33c0d1864fc5a3, type: 3}
+    answer0:
+      en: Doro Wat
+      native: "\u12F6\u122E \u12C8\u1325"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Shiro
+      native: "\u123D\u122E"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Tibs
+      native: "\u1325\u1265\u1235"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Kik Alicha
+      native: "\u12AD\u12AD \u12A0\u120D\u127B"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 01000000
+    useImageAnswers: 0
+  - id: 21
+    questionText:
+      en: Which mountain is the highest in Ethiopia?
+      native: "\u12A8\u134D\u1270\u129B\u12CD \u1270\u122B\u122B \u12E8\u1275\u129B\u12CD
+        \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Ras Dashen
+      native: "\u122B\u1235 \u12F3\u123D\u1295"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Mount Kenya
+      native: "\u12AC\u1295\u12EB \u1270\u122B\u122B"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Kilimanjaro
+      native: "\u12AA\u120A\u121B\u1295\u1303\u122E"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Entoto
+      native: "\u12A5\u1295\u1326\u1326"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 22
+    questionText:
+      en: Which script is used in Amharic?
+      native: "\u12A0\u121B\u122D\u129B \u12E8\u121A\u1320\u1240\u121D\u1260\u1275
+        \u134A\u12F0\u120D \u12E8\u1275\u129B\u12CD \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Latin
+      native: "\u120B\u1272\u1295"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Arabic
+      native: "\u12A0\u1228\u1265"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Chinese
+      native: "\u127B\u12ED\u1293"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Geez
+      native: "\u130D\u12D5\u12DD"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 03000000
+    useImageAnswers: 0
+  - id: 23
+    questionText:
+      en: What is this traditional dance?
+      native: "\u12ED\u1205 \u12E8\u1263\u1205\u120B\u12CA \u12F3\u1295\u1235 \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 2800000, guid: 5f7d169244d31a64fa78bf37ac1db15b, type: 3}
+    answer0:
+      en: Eskista
+      native: "\u12A5\u1235\u12AD\u1235\u1273"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Shagoyee
+      native: "\u123B\u130E\u12EC"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Eskista
+      native: "\u12A5\u1235\u12AD\u1235\u1273"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Ballet
+      native: "\u1263\u120C"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 02000000
+    useImageAnswers: 0
+  - id: 24
+    questionText:
+      en: Which lake is largest in Ethiopia?
+      native: "\u1275\u120D\u1241 \u1210\u12ED\u1245 \u12E8\u1275\u129B\u12CD \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Lake Tana
+      native: "\u1273\u1293 \u1210\u12ED\u1245"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Lake Ziway
+      native: "\u12DD\u12CB\u12ED \u1210\u12ED\u1245"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Lake Abaya
+      native: "\u12A0\u1263\u12EB \u1210\u12ED\u1245"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Lake Hawassa
+      native: "\u1210\u12CB\u1233 \u1210\u12ED\u1245"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 25
+    questionText:
+      en: What is this coffee tool?
+      native: "\u12ED\u1205 \u12E8\u1261\u1293 \u1218\u1233\u122A\u12EB \u121D\u1295\u12F5\u1290\u12CD?"
+    questionVisual: {fileID: 2800000, guid: 0e5d24b106020a04c921d7da54c9c537, type: 3}
+    answer0:
+      en: Jebena
+      native: "\u1300\u1260\u1293"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Mukecha
+      native: "\u1219\u1240\u132B"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Sini
+      native: "\u1235\u1292"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Mahder
+      native: "\u1218\u1210\u12F0\u122D"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 01000000
+    useImageAnswers: 0
+  - id: 26
+    questionText:
+      en: Which festival uses bonfires?
+      native: "\u12E8\u12A5\u1233\u1275 \u1218\u1295\u12F0\u122D \u12E8\u121A\u1320\u1240\u121D
+        \u1260\u12D3\u120D \u12E8\u1275\u129B\u12CD \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Timket
+      native: "\u1325\u121D\u1240\u1275"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Gena
+      native: "\u1308\u1293"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Irreecha
+      native: "\u12A5\u122C\u127B"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Meskel
+      native: "\u1218\u1235\u1240\u120D"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 03000000
+    useImageAnswers: 0
+  - id: 27
+    questionText:
+      en: Who is this famous runner?
+      native: "\u12ED\u1205 \u12E8\u1273\u12CB\u1242 \u122F\u132D \u121B\u1295 \u1290\u12CD?"
+    questionVisual: {fileID: 2800000, guid: bcca3243e7b66b442a722353d2e10a41, type: 3}
+    answer0:
+      en: Abebe Bikila
+      native: "\u12A0\u1260\u1260 \u1262\u1242\u120B"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Haile Gebrselassie
+      native: "\u1200\u12ED\u120C \u1308\u1265\u1228\u1235\u120B\u1234"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Kenenisa Bekele
+      native: "\u1240\u1290\u1292\u1233 \u1260\u1240\u1208"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Tirunesh Dibaba
+      native: "\u1325\u1229\u1290\u123D \u12F2\u1263\u1263"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 1
+    correctIndices: 02000000
+    useImageAnswers: 0
+  - id: 28
+    questionText:
+      en: How many months are in Ethiopian calendar?
+      native: "\u1260\u12A2\u1275\u12EE\u1335\u12EB \u12D8\u1218\u1295 \u1235\u1295\u1275
+        \u12C8\u122B\u1275 \u12A0\u1209?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: 13
+      native: 13
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: 12
+      native: 12
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: 10
+      native: 10
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: 14
+      native: 14
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 00000000
+    useImageAnswers: 0
+  - id: 29
+    questionText:
+      en: "What does \u201CSelam\u201D mean?"
+      native: "\u201C\u1230\u120B\u121D\u201D \u121D\u1295 \u121B\u1208\u1275 \u1290\u12CD?"
+    questionVisual: {fileID: 0}
+    answer0:
+      en: Goodbye
+      native: "\u12F0\u1205\u1293 \u1201\u1295"
+    answer0_Image: {fileID: 0}
+    answer1:
+      en: Peace/Hello
+      native: "\u1230\u120B\u121D"
+    answer1_Image: {fileID: 0}
+    answer2:
+      en: Thank you
+      native: "\u12A0\u1218\u1230\u130D\u1293\u1208\u1201"
+    answer2_Image: {fileID: 0}
+    answer3:
+      en: Sorry
+      native: "\u12ED\u1245\u122D\u1273"
+    answer3_Image: {fileID: 0}
+    useQuestionAnswer: 0
+    correctIndices: 01000000
+    useImageAnswers: 0
+  tiers:
+  - title:
+      en: Beginner
+      native: "\u1300\u121B\u122A"
+    maxPercentage: 12
+    subtitle:
+      en: Just Getting Started
+      native: "\u1218\u1300\u1218\u122A\u12EB \u1290\u12CD"
+    description:
+      en: "You are just starting your journey. There\u2019s a lot to learn, but this
+        is the first step."
+      native: "\u1309\u12DE\u1205\u1295 \u12A0\u1201\u1295 \u1275\u1300\u121D\u122B\u1208\u1205\u1362
+        \u1208\u1218\u121B\u122D \u1265\u12D9 \u1290\u1308\u122D \u12A0\u1208\u1363
+        \u12ED\u1205 \u130D\u1295 \u12E8\u1218\u1300\u1218\u122A\u12EB \u12A5\u122D\u121D\u1303
+        \u1290\u12CD\u1362"
+  - title:
+      en: Learner
+      native: "\u1270\u121B\u122A"
+    maxPercentage: 25
+    subtitle:
+      en: Keep Improving
+      native: "\u1240\u1325\u120D \u12A5\u12E8\u1270\u123B\u123B\u120D\u12AD"
+    description:
+      en: You have some basic understanding, but there is still room to grow. Keep
+        going.
+      native: "\u1218\u1220\u1228\u1273\u12CA \u130D\u1295\u12DB\u1264 \u12A0\u1208\u1205\u1363
+        \u1290\u1308\u122D \u130D\u1295 \u1208\u1218\u123B\u123B\u120D \u1266\u1273
+        \u12A0\u1208\u1362 \u1240\u1325\u120D\u1362"
+  - title:
+      en: Intermediate
+      native: "\u1218\u12AB\u12A8\u1208\u129B"
+    maxPercentage: 40
+    subtitle:
+      en: "You\u2019re Getting There"
+      native: "\u1240\u122D\u1260\u1203\u120D"
+    description:
+      en: You understand quite a bit and are improving steadily. A little more effort
+        will take you further.
+      native: "\u1265\u12D9 \u1290\u1308\u122D \u1273\u12CD\u1243\u1208\u1205 \u12A5\u1293
+        \u1260\u1240\u1235\u1273 \u1273\u123B\u123B\u1208\u1205\u1362 \u1275\u1295\u123D
+        \u1270\u1328\u121B\u122A \u1325\u1228\u1275 \u12ED\u1348\u120D\u130B\u120D\u1362"
+  - title:
+      en: Skilled
+      native: "\u1265\u1243\u1275 \u12EB\u1208\u12CD"
+    maxPercentage: 60
+    subtitle:
+      en: Doing Well
+      native: "\u1325\u1229 \u12A5\u12E8\u1204\u12F5\u12AD \u1290\u12CD"
+    description:
+      en: You have solid knowledge and can handle most questions confidently.
+      native: "\u1320\u1295\u12AB\u122B \u12A5\u12CD\u1240\u1275 \u12A0\u1208\u1205
+        \u12A5\u1293 \u12A0\u1265\u12DB\u129B\u12CE\u1279\u1295 \u1325\u12EB\u1244\u12CE\u127D
+        \u1260\u1218\u1270\u121B\u1218\u1295 \u1275\u1218\u120D\u1233\u1208\u1205\u1362"
+  - title:
+      en: Advanced
+      native: "\u12A8\u134D\u1270\u129B"
+    maxPercentage: 75
+    subtitle:
+      en: Almost There
+      native: "\u1240\u122D\u1266\u1203\u120D"
+    description:
+      en: You are very knowledgeable and only a few challenges remain.
+      native: "\u12A5\u1305\u130D \u1265\u12D9 \u1290\u1308\u122D \u1273\u12CD\u1243\u1208\u1205\u1363
+        \u1325\u1242\u1275 \u1265\u127B \u1290\u1308\u122E\u127D \u1240\u122D\u1270\u12CB\u120D\u1362"
+  - title:
+      en: Expert
+      native: "\u1263\u1208\u1219\u12EB"
+    maxPercentage: 85
+    subtitle:
+      en: Top Level
+      native: "\u12A8\u134D\u1270\u129B \u12F0\u1228\u1303"
+    description:
+      en: You have deep understanding and perform at a high level consistently.
+      native: "\u1325\u120D\u1245 \u12A5\u12CD\u1240\u1275 \u12A0\u1208\u1205 \u12A5\u1293
+        \u1260\u12A8\u134D\u1270\u129B \u12F0\u1228\u1303 \u1275\u1230\u122B\u1208\u1205\u1362"
+  - title:
+      en: Master
+      native: "\u130C\u1273"
+    maxPercentage: 94
+    subtitle:
+      en: Outstanding
+      native: "\u12A5\u1305\u130D \u12E8\u121A\u12EB\u121D\u122D"
+    description:
+      en: You are among the best. Your knowledge and thinking are exceptional.
+      native: "\u12A8\u121D\u122D\u1326\u127D \u1218\u12AB\u12A8\u120D \u1290\u1205\u1362
+        \u12A5\u12CD\u1240\u1275\u1205\u1293 \u12A0\u1235\u1270\u1233\u1230\u1265\u1205
+        \u12A5\u1305\u130D \u12ED\u120D\u1243\u120D\u1362"
+  - title:
+      en: Genius
+      native: "\u1325\u1260\u1260\u129B"
+    maxPercentage: 100
+    subtitle:
+      en: Perfect Score
+      native: "\u134D\u1339\u121D \u12CD\u1324\u1275"
+    description:
+      en: You reached the highest level. Exceptional knowledge and understanding.
+      native: "\u12A8\u134D\u1270\u129B\u12CD\u1295 \u12F0\u1228\u1303 \u12F0\u122D\u1230\u1203\u120D\u1362
+        \u12A5\u1305\u130D \u12E8\u120B\u1240 \u12A5\u12CD\u1240\u1275 \u12A0\u1208\u1205\u1362"

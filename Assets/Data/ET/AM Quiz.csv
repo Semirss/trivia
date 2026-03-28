@@ -1,0 +1,31 @@
+ID,CorrectIndex,Q_EN,Q_Native,Use Question Image,Use Answer Image,A0_EN,A0_Native,A1_EN,A1_Native,A2_EN,A2_Native,A3_EN,A3_Native
+0,0,What is the capital city of Ethiopia?,የኢትዮጵያ ዋና ከተማ ማን ናት?,FALSE,FALSE,Addis Ababa,አዲስ አበባ,Adama,አዳማ,Bahir Dar,ባህር ዳር,Mekelle,መቀሌ
+1,2,Which of these is the Ethiopian flag?,ከእነዚህ የኢትዮጵያ ባንዲራ የትኛው ነው?,FALSE,TRUE,Egypt Flag,የግብፅ ባንዲራ,Eritrea Flag,የኤርትራ ባንዲራ,Ethiopia Flag,የኢትዮጵያ ባንዲራ,Kenya Flag,የኬንያ ባንዲራ
+2,1,What is the main staple food of Ethiopia?,ዋና የምግብ አይነት ምንድነው?,FALSE,FALSE,Rice,ሩዝ,Injera,እንጀራ,Pasta,ፓስታ,Bread,ዳቦ
+3,3,Which animal is known as Ethiopia’s national symbol?,የኢትዮጵያ ምልክት የሆነ እንስሳ የትኛው ነው?,FALSE,FALSE,Lion,አንበሳ,Elephant,ዝሆን,Giraffe,ዘራፍ,Black Lion,ጥቁር አንበሳ
+4,0,Identify this landmark.,ይህን ምልክት ለይ,FALSE,TRUE,Lalibela Churches,የላሊበላ ቤተክርስቲያናት,Axum Obelisk,አክሱም ሐውልት,Fasil Castle,ፋሲል ግንብ,Unity Park,ዩኒቲ ፓርክ
+5,1,Which river is the longest in Ethiopia?,በኢትዮጵያ ውስጥ ረጅሙ ወንዝ የትኛው ነው?,FALSE,FALSE,Awash,አዋሽ,Abay (Blue Nile),አባይ,Tekeze,ተከዜ,Omo,ኦሞ
+6,2,Which Ethiopian coffee ceremony item is this?,ይህ የቡና ሥነ-ሥርዓት እቃ ምንድነው?,TRUE,FALSE,Jebena,ጀበና,Cup,ስኒ,Incense,ዕጣን,Tray,ሳህን
+7,0,What is the official language of Ethiopia?,የኢትዮጵያ መደበኛ ቋንቋ ምንድነው?,FALSE,FALSE,Amharic,አማርኛ,Oromo,ኦሮምኛ,Tigrinya,ትግርኛ,English,እንግሊዝኛ
+8,3,Which city is known for rock-hewn churches?,በድንጋይ የተቆረጡ ቤተክርስቲያናት የሚታወቀው ከተማ የትኛው ነው?,FALSE,FALSE,Gondar,ጎንደር,Axum,አክሱም,Harar,ሐረር,Lalibela,ላሊበላ
+9,1,Identify this traditional clothing.,ይህን ባህላዊ ልብስ ለይ,TRUE,FALSE,Netela,ነጠላ,Habesha Kemis,ሐበሻ ከሚስ,Gabi,ጋቢ,Kuta,ኩታ
+10,2,Which animal is endemic to Ethiopia?,በኢትዮጵያ ብቻ የሚገኝ እንስሳ የትኛው ነው?,FALSE,FALSE,Lion,አንበሳ,Zebra,ዝብራ,Ethiopian Wolf,የኢትዮጵያ ቀበሮ,Leopard,ነብር
+11,0,What is the Ethiopian calendar based on?,የኢትዮጵያ ዘመን ምን ላይ ይመሰረታል?,FALSE,FALSE,Coptic Calendar,ኮፕቲክ ዘመን,Gregorian,ግሪጎሪያን,Julian,ጁሊያን,Lunar,ጨረቃ
+12,3,Which instrument is this?,ይህ የሙዚቃ መሳሪያ ምንድነው?,TRUE,FALSE,Masenqo,ማሰንቆ,Kebero,ከበሮ,Washint,ዋሽንት,All of them,ሁሉም
+13,1,What is the main export of Ethiopia?,ዋና የሚላክ እቃ ምንድነው?,FALSE,FALSE,Gold,ወርቅ,Coffee,ቡና,Oil,ነዳጅ,Cotton,ጥጥ
+14,0,Who was Menelik II?,መንሊክ ሁለተኛ ማን ነበር?,FALSE,FALSE,Emperor,ንጉሥ,General,ጄነራል,Artist,አርቲስት,Merchant,ነጋዴ
+15,2,Which event is shown here?,ይህ የትኛው በዓል ነው?,TRUE,FALSE,Timket,ጥምቀት,Meskel,መስቀል,Irreecha,እሬቻ,Gena,ገና
+16,1,What is Injera made from?,እንጀራ ከምን ይሰራል?,FALSE,FALSE,Wheat,ስንዴ,Teff,ጤፍ,Corn,በቆሎ,Rice,ሩዝ
+17,3,Which region is this map showing?,ይህ ካርታ የትኛው ክልል ነው?,TRUE,FALSE,Oromia,ኦሮሚያ,Amhara,አማራ,Tigray,ትግራይ,Somali,ሶማሊ
+18,0,What is the currency of Ethiopia?,የኢትዮጵያ ገንዘብ ምንድነው?,FALSE,FALSE,Birr,ብር,Dollar,ዶላር,Euro,ዩሮ,Pound,ፓውንድ
+19,2,Which sport is Ethiopia famous for?,ኢትዮጵያ በምን ስፖርት ታዋቂ ናት?,FALSE,FALSE,Football,እግር ኳስ,Basketball,ባስኬትቦል,Long Distance Running,ረጅም ሩጫ,Tennis,ቴኒስ
+20,1,Identify this food.,ይህን ምግብ ለይ,TRUE,FALSE,Doro Wat,ዶሮ ወጥ,Shiro,ሽሮ,Tibs,ጥብስ,Kik Alicha,ክክ አልቻ
+21,0,Which mountain is the highest in Ethiopia?,ከፍተኛው ተራራ የትኛው ነው?,FALSE,FALSE,Ras Dashen,ራስ ዳሽን,Mount Kenya,ኬንያ ተራራ,Kilimanjaro,ኪሊማንጃሮ,Entoto,እንጦጦ
+22,3,Which script is used in Amharic?,አማርኛ የሚጠቀምበት ፊደል የትኛው ነው?,FALSE,FALSE,Latin,ላቲን,Arabic,አረብ,Chinese,ቻይና,Geez,ግዕዝ
+23,2,What is this traditional dance?,ይህ የባህላዊ ዳንስ ምንድነው?,TRUE,FALSE,Eskista,እስክስታ,Shagoyee,ሻጎዬ,Eskista,እስክስታ,Ballet,ባሌ
+24,0,Which lake is largest in Ethiopia?,ትልቁ ሐይቅ የትኛው ነው?,FALSE,FALSE,Lake Tana,ታና ሐይቅ,Lake Ziway,ዝዋይ ሐይቅ,Lake Abaya,አባያ ሐይቅ,Lake Hawassa,ሐዋሳ ሐይቅ
+25,1,What is this coffee tool?,ይህ የቡና መሳሪያ ምንድነው?,TRUE,FALSE,Jebena,ጀበና,Mukecha,ሙቀጫ,Sini,ስኒ,Mahder,መሐደር
+26,3,Which festival uses bonfires?,የእሳት መንደር የሚጠቀም በዓል የትኛው ነው?,FALSE,FALSE,Timket,ጥምቀት,Gena,ገና,Irreecha,እሬቻ,Meskel,መስቀል
+27,2,Who is this famous runner?,ይህ የታዋቂ ሯጭ ማን ነው?,TRUE,FALSE,Abebe Bikila,አበበ ቢቂላ,Haile Gebrselassie,ሀይሌ ገብረስላሴ,Kenenisa Bekele,ቀነኒሳ በቀለ,Tirunesh Dibaba,ጥሩነሽ ዲባባ
+28,0,How many months are in Ethiopian calendar?,በኢትዮጵያ ዘመን ስንት ወራት አሉ?,FALSE,FALSE,13,13,12,12,10,10,14,14
+29,1,What does “Selam” mean?,“ሰላም” ምን ማለት ነው?,FALSE,FALSE,Goodbye,ደህና ሁን,Peace/Hello,ሰላም,Thank you,አመሰግናለሁ,Sorry,ይቅርታ

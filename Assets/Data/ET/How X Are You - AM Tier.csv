@@ -1,0 +1,9 @@
+﻿MaxPercent,Title_EN,Title_Native,Subtitle_EN,Subtitle_Native,Desc_EN,Desc_Native
+12,Beginner,ጀማሪ,Just Getting Started,መጀመሪያ ነው,"You are just starting your journey. There’s a lot to learn, but this is the first step.",ጉዞህን አሁን ትጀምራለህ። ለመማር ብዙ ነገር አለ፣ ይህ ግን የመጀመሪያ እርምጃ ነው።
+25,Learner,ተማሪ,Keep Improving,ቀጥል እየተሻሻልክ,"You have some basic understanding, but there is still room to grow. Keep going.",መሠረታዊ ግንዛቤ አለህ፣ ነገር ግን ለመሻሻል ቦታ አለ። ቀጥል።
+40,Intermediate,መካከለኛ,You’re Getting There,ቀርበሃል,You understand quite a bit and are improving steadily. A little more effort will take you further.,ብዙ ነገር ታውቃለህ እና በቀስታ ታሻሻለህ። ትንሽ ተጨማሪ ጥረት ይፈልጋል።
+60,Skilled,ብቃት ያለው,Doing Well,ጥሩ እየሄድክ ነው,You have solid knowledge and can handle most questions confidently.,ጠንካራ እውቀት አለህ እና አብዛኛዎቹን ጥያቄዎች በመተማመን ትመልሳለህ።
+75,Advanced,ከፍተኛ,Almost There,ቀርቦሃል,You are very knowledgeable and only a few challenges remain.,እጅግ ብዙ ነገር ታውቃለህ፣ ጥቂት ብቻ ነገሮች ቀርተዋል።
+85,Expert,ባለሙያ,Top Level,ከፍተኛ ደረጃ,You have deep understanding and perform at a high level consistently.,ጥልቅ እውቀት አለህ እና በከፍተኛ ደረጃ ትሰራለህ።
+94,Master,ጌታ,Outstanding,እጅግ የሚያምር,You are among the best. Your knowledge and thinking are exceptional.,ከምርጦች መካከል ነህ። እውቀትህና አስተሳሰብህ እጅግ ይልቃል።
+100,Genius,ጥበበኛ,Perfect Score,ፍጹም ውጤት,You reached the highest level. Exceptional knowledge and understanding.,ከፍተኛውን ደረጃ ደርሰሃል። እጅግ የላቀ እውቀት አለህ።

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1876d1f63a248ff4e94560d628feca92, type: 3}
+  m_Name: NewProfile
+  m_EditorClassIdentifier: Assembly-CSharp::HowX.Data.QuizProfile
+  folderName: 
+  backgroundImage: {fileID: 0}
+  quizCsvFile: {fileID: 0}
+  tierCsvFile: {fileID: 0}
+  uiCsvFile: {fileID: 0}
+  quizSheetUrl: 
+  tierSheetUrl: 
+  uiSheetUrl: https://docs.google.com/spreadsheets/d/1uaYj6X-N2Bwkczij0TJIeYPY2IcH4pWVpE1663HkpMM/edit?usp=sharing
+  uiData:
+    titleTemplate:
+      en: How {0} Are You?
+      native: "\u12A5\u122D\u1235\u12CE \u121D\u1295 \u12EB\u1205\u120D {0} \u1290\u12CE\u1275?"
+    btnStart:
+      en: Start Game
+      native: "\u1328\u12CB\u1273 \u1300\u121D\u122D"
+    btnRestart:
+      en: Try Again
+      native: "\u12A5\u1295\u12F0\u1308\u1293 \u121E\u12AD\u122D"
+    btnLang:
+      en: English
+      native: "\u12A0\u121B\u122D\u129B"
+    confirmTitle:
+      en: 
+      native: 
+    btnYes:
+      en: 
+      native: 
+    btnNo:
+      en: 
+      native: 
+    flagIcon: {fileID: 0}
+  questions: []
+  tiers: []
