@@ -368,6 +368,31 @@ namespace HowX.Core
                 backCategoryButton.text = string.IsNullOrEmpty(text) ? MISSING_TEXT : text;
             }
 
+            // Individual Category Topic Buttons
+            if (categoryProfiles != null)
+            {
+                foreach (var mapping in categoryProfiles)
+                {
+                    Button catBtn = root.Q<Button>(mapping.buttonName);
+                    if (catBtn != null && mapping.profile != null && mapping.profile.uiData != null)
+                    {
+                        string text = mapping.profile.uiData.categoryName?.Get(isNativeLanguage);
+                        if (!string.IsNullOrEmpty(text))
+                        {
+                            catBtn.text = text;
+                        }
+                    }
+                }
+            }
+
+            // Category Title Label (Header inside the Category Screen)
+            Label categoryTitle = root.Q<Label>("catagory");
+            if (categoryTitle != null)
+            {
+                string text = currentProfile.uiData.btnCategory?.Get(isNativeLanguage);
+                categoryTitle.text = string.IsNullOrEmpty(text) ? MISSING_TEXT : text;
+            }
+
             // Restart Button
             if (restartButton != null)
             {
@@ -388,6 +413,9 @@ namespace HowX.Core
                 flagIcon.style.backgroundImage = currentProfile.uiData.flagIcon;
                 flagIcon.style.display = DisplayStyle.Flex;
             }
+
+            // Sync the Telecoins label language
+            UpdateScoreLabel(TelecoinManager.TotalCoins);
         }
 
         private void ToggleLanguage()
@@ -860,7 +888,9 @@ namespace HowX.Core
         private void UpdateScoreLabel(int newTotal)
         {
             if (scoreLabel != null)
-                scoreLabel.text = $"{newTotal} Telecoins";
+            {
+                scoreLabel.text = isNativeLanguage ? $"{newTotal} ቴሌኮይን" : $"{newTotal} Telecoins";
+            }
         }
 
         #endregion

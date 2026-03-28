@@ -7,6 +7,9 @@ namespace HowX.Data
     {
         // Title Template: "How (name) Are You?"
         public LocalizedText titleTemplate;
+        
+        // Name of the category on the category screen
+        public LocalizedText categoryName;
 
         // Button Texts
         public LocalizedText btnStart;

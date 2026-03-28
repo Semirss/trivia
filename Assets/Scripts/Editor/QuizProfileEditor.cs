@@ -660,6 +660,9 @@ public class QuizProfileEditor : Editor
                 case "title_template":
                     profile.uiData.titleTemplate = new LocalizedText { en = en, native = nat };
                     break;
+                case "category_name":
+                    profile.uiData.categoryName = new LocalizedText { en = en, native = nat };
+                    break;
                 case "confirm_title":
                     profile.uiData.confirmTitle = new LocalizedText { en = en, native = nat };
                     break;
