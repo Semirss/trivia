@@ -2,11 +2,19 @@ using HowX.Data;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace HowX.Core
 {
+    [Serializable]
+    public struct CategoryData
+    {
+        public string buttonName;  // e.g. "Generalknowlege"
+        public QuizProfile profile; // The profile to load
+    }
+
     public class GameController : MonoBehaviour
     {
         #region Constants
@@ -26,6 +34,10 @@ namespace HowX.Core
         [Header("Settings")]
         [SerializeField] private int questionsPerGame = 20;
 
+        [Header("Categories")]
+        [Tooltip("Map UI Builder button names to their corresponding QuizProfiles.")]
+        [SerializeField] private List<CategoryData> categoryProfiles = new List<CategoryData>();
+
         #endregion
 
         #region UI References
@@ -33,13 +45,15 @@ namespace HowX.Core
         private UIDocument uiDocument;
         private VisualElement root;
         private VisualElement transitionPanel;
-        private VisualElement menuContainer, quizContainer, resultContainer;
+        private VisualElement menuContainer, categoryContainer, quizContainer, resultContainer;
         private VisualElement progressBarFill;
         private VisualElement flagIcon;
 
         private Label titleLabel;
         private Button startButton;
+        private Button categoryMenuButton;
         private Button langButton;
+        private Button backCategoryButton;
         private Label questionLabel;
         private VisualElement questionImage;
         private Button[] answerButtons;
@@ -117,6 +131,7 @@ namespace HowX.Core
         {
             // Containers
             menuContainer = root.Q<VisualElement>("Container_Menu");
+            categoryContainer = root.Q<VisualElement>("Container_Catagory"); // Spelling matches UXML screenshot
             quizContainer = root.Q<VisualElement>("Container_Quiz");
             resultContainer = root.Q<VisualElement>("Container_Result");
             transitionPanel = root.Q<VisualElement>("Panel_Transition");
@@ -125,6 +140,7 @@ namespace HowX.Core
             // Menu Elements
             titleLabel = root.Q<Label>("Lbl_Title");
             startButton = root.Q<Button>("Btn_Start");
+            categoryMenuButton = root.Q<Button>("Btn_catagory");
             langButton = root.Q<Button>("Btn_LangToggle");
             flagIcon = root.Q<VisualElement>("Img_Flag");
 
@@ -137,6 +153,9 @@ namespace HowX.Core
             resultDesc = root.Q<Label>("Lbl_ResultDesc");
             resultScore = root.Q<Label>("Lbl_Score");
             restartButton = root.Q<Button>("Btn_Restart");
+
+            // Category Elements
+            backCategoryButton = root.Q<Button>("Back");
 
             // Economy
             scoreLabel = root.Q<Label>("Score");
@@ -173,13 +192,30 @@ namespace HowX.Core
             if (startButton != null)
                 startButton.clicked += StartGame;
 
+            if (categoryMenuButton != null)
+                categoryMenuButton.clicked += OpenCategories;
+
             if (langButton != null)
                 langButton.clicked += ToggleLanguage;
 
             if (restartButton != null)
                 restartButton.clicked += RestartButtonPressed;
 
+            if (backCategoryButton != null)
+                backCategoryButton.clicked += CloseCategories;
+
             GameEvents.OnGameRestart += RestartGame;
+
+            // Setup Category Buttons
+            foreach (var mapping in categoryProfiles)
+            {
+                Button catBtn = root.Q<Button>(mapping.buttonName);
+                if (catBtn != null)
+                {
+                    QuizProfile catProfile = mapping.profile;
+                    catBtn.clicked += () => StartCategoryGame(catProfile);
+                }
+            }
         }
 
         private void CleanupAnswerButtons()
@@ -200,13 +236,22 @@ namespace HowX.Core
             if (startButton != null)
                 startButton.clicked -= StartGame;
 
+            if (categoryMenuButton != null)
+                categoryMenuButton.clicked -= OpenCategories;
+
             if (langButton != null)
                 langButton.clicked -= ToggleLanguage;
 
             if (restartButton != null)
                 restartButton.clicked -= RestartButtonPressed;
 
+            if (backCategoryButton != null)
+                backCategoryButton.clicked -= CloseCategories;
+
             GameEvents.OnGameRestart -= RestartGame;
+            
+            // Note: inline anonymous callbacks for categories are automatically 
+            // garbage collected when UI elements are destroyed or re-queried.
         }
 
         private void InitializeUIState()
@@ -231,6 +276,9 @@ namespace HowX.Core
 
             if (resultContainer != null)
                 resultContainer.style.display = DisplayStyle.None;
+
+            if (categoryContainer != null)
+                categoryContainer.style.display = DisplayStyle.None;
 
             if (menuContainer != null)
                 menuContainer.style.display = DisplayStyle.Flex;
@@ -306,6 +354,20 @@ namespace HowX.Core
                 startButton.text = string.IsNullOrEmpty(text) ? MISSING_TEXT : text;
             }
 
+            // Category Button
+            if (categoryMenuButton != null)
+            {
+                string text = currentProfile.uiData.btnCategory?.Get(isNativeLanguage);
+                categoryMenuButton.text = string.IsNullOrEmpty(text) ? MISSING_TEXT : text;
+            }
+
+            // Back Button
+            if (backCategoryButton != null)
+            {
+                string text = currentProfile.uiData.btnBack?.Get(isNativeLanguage);
+                backCategoryButton.text = string.IsNullOrEmpty(text) ? MISSING_TEXT : text;
+            }
+
             // Restart Button
             if (restartButton != null)
             {
@@ -343,6 +405,30 @@ namespace HowX.Core
         #endregion
 
         #region Game Flow
+
+        private void OpenCategories()
+        {
+            if (isTransitioning) return;
+            StartCoroutine(SwitchPanels(menuContainer, categoryContainer));
+        }
+
+        private void CloseCategories()
+        {
+            if (isTransitioning) return;
+            StartCoroutine(SwitchPanels(categoryContainer, menuContainer));
+        }
+
+        private void StartCategoryGame(QuizProfile profileToLoad)
+        {
+             if (profileToLoad == null)
+             {
+                 Debug.LogError("Clicked a category but its profile mapping is null!");
+                 return;
+             }
+
+             currentProfile = profileToLoad;
+             StartGame();
+        }
 
         private void StartGame()
         {
@@ -385,7 +471,9 @@ namespace HowX.Core
             GameEvents.OnGameStart?.Invoke();
             LoadQuestion();
 
-            StartCoroutine(SwitchPanels(menuContainer, quizContainer));
+            // Support starting from either menu or categories
+            VisualElement activeStartPanel = (categoryContainer?.style.display == DisplayStyle.Flex) ? categoryContainer : menuContainer;
+            StartCoroutine(SwitchPanels(activeStartPanel, quizContainer));
         }
 
         private void LoadQuestion()
@@ -622,7 +710,10 @@ namespace HowX.Core
         {
             if (isTransitioning) return;
             UpdateUIText();
-            VisualElement currentActive = resultContainer?.style.display == DisplayStyle.Flex ? resultContainer : quizContainer;
+            
+            VisualElement currentActive = root.Q<VisualElement>().Children().FirstOrDefault(v => v.style.display == DisplayStyle.Flex && v.name.StartsWith("Container_"));
+            if (currentActive == null) currentActive = resultContainer?.style.display == DisplayStyle.Flex ? resultContainer : quizContainer;
+            
             StartCoroutine(SwitchPanels(currentActive, menuContainer));
         }
 

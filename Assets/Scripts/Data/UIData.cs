@@ -10,6 +10,8 @@ namespace HowX.Data
 
         // Button Texts
         public LocalizedText btnStart;
+        public LocalizedText btnCategory;
+        public LocalizedText btnBack;
         public LocalizedText btnRestart;
         public LocalizedText btnLang;
 

@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -647,6 +647,12 @@ public class QuizProfileEditor : Editor
                     break;
                 case "btn_restart":
                     profile.uiData.btnRestart = new LocalizedText { en = en, native = nat };
+                    break;
+                case "btn_category":
+                    profile.uiData.btnCategory = new LocalizedText { en = en, native = nat };
+                    break;
+                case "btn_back":
+                    profile.uiData.btnBack = new LocalizedText { en = en, native = nat };
                     break;
                 case "btn_lang":
                     profile.uiData.btnLang = new LocalizedText { en = en, native = nat };
