@@ -24,9 +24,18 @@ MonoBehaviour:
     titleTemplate:
       en: Ethio Trivia
       native: "\u12A2\u1275\u12EE \u1325\u12EB\u1244\u1293 \u1218\u120D\u1235"
+    categoryName:
+      en: General Knowledge
+      native: "\u12A0\u1320\u1243\u120B\u12ED \u12A5\u12CD\u1240\u1275"
     btnStart:
       en: Start Game
       native: "\u1328\u12CB\u1273 \u1300\u121D\u122D"
+    btnCategory:
+      en: "Categories\t"
+      native: "\u121D\u12F5\u1266\u127D"
+    btnBack:
+      en: "Back\t"
+      native: "\u1270\u1218\u1208\u1235\r\n"
     btnRestart:
       en: Try Again
       native: "\u12A5\u1295\u12F0\u1308\u1293 \u121E\u12AD\u122D"
@@ -34,15 +43,15 @@ MonoBehaviour:
       en: English
       native: "\u12A0\u121B\u122D\u129B"
     confirmTitle:
-      en: 
-      native: 
+      en: Go to menu
+      native: "\u12C8\u12F0 \u12CB\u1293\u12CD \u1308\u133D \u12ED\u1202\u12F1"
     btnYes:
-      en: 
-      native: 
+      en: YES
+      native: "\u12A0\u12CE"
     btnNo:
-      en: 
-      native: 
-    flagIcon: {fileID: 0}
+      en: NO
+      native: "\u12A0\u12ED\r\n"
+    flagIcon: {fileID: 2800000, guid: 426c35128f640de4d9e25e972648146e, type: 3}
   questions:
   - id: 00
     questionText:

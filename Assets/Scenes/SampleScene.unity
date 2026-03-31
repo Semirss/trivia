@@ -167,6 +167,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HowX.Core.GameController
   currentProfile: {fileID: 11400000, guid: e6b9990b3d8dbca48aa354afa524fb57, type: 2}
   questionsPerGame: 20
+  categoryProfiles:
+  - buttonName: General-knowlege
+    profile: {fileID: 11400000, guid: e6b9990b3d8dbca48aa354afa524fb57, type: 2}
+  - buttonName: Movies-Knowlege
+    profile: {fileID: 11400000, guid: c5b9f914ad7383642a01ffed682603ed, type: 2}
 --- !u!114 &54952407
 MonoBehaviour:
   m_ObjectHideFlags: 0
